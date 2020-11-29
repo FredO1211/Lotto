@@ -1,4 +1,4 @@
-package com.github.FredO1211.Lotto.message_generator;
+package com.github.FredO1211.Lotto.messagegenerator;
 
 import com.github.FredO1211.Lotto.model.LottoCompany;
 import com.github.FredO1211.Lotto.model.User;
