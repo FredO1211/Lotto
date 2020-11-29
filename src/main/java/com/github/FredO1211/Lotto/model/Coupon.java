@@ -1,4 +1,6 @@
-package com.github.FredO1211.Lotto;
+package com.github.FredO1211.Lotto.model;
+
+import com.github.FredO1211.Lotto.message_generator.MessageGenerator;
 
 import java.util.Set;
 

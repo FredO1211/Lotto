@@ -1,4 +1,7 @@
-package com.github.FredO1211.Lotto;
+package com.github.FredO1211.Lotto.message_generator;
+
+import com.github.FredO1211.Lotto.model.LottoCompany;
+import com.github.FredO1211.Lotto.model.User;
 
 public class MessageGenerator {
     public static final String WINNING_MSG = "Gratulacje, wygrałeś ";

@@ -1,4 +1,6 @@
-package com.github.FredO1211.Lotto;
+package com.github.FredO1211.Lotto.model;
+
+import com.github.FredO1211.Lotto.message_generator.MessageGenerator;
 
 import java.util.*;
 
@@ -17,11 +19,11 @@ public class LottoCompany {
         winningAmountMap.put(6, 1000000);
     }
 
-    static int getCouponCost() {
+    public static int getCouponCost() {
         return COUPON_COST;
     }
 
-    static int getWinningValue(Integer quantityOfCorrectNumbers) {
+    public static int getWinningValue(Integer quantityOfCorrectNumbers) {
         return LottoCompany.getWinningAmountMap().get(quantityOfCorrectNumbers);
     }
 

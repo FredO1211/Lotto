@@ -1,4 +1,6 @@
-package com.github.FredO1211.Lotto;
+package com.github.FredO1211.Lotto.model;
+
+import com.github.FredO1211.Lotto.message_generator.MessageGenerator;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -13,11 +15,11 @@ public class User {
         this.balance = balance;
     }
 
-    int getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void printMyCoupons() {
+    public void printCoupons() {
         System.out.println("Twoje kupony:");
         for (Coupon coupon : coupons) {
             System.out.println(coupon.getNumbers());
