@@ -1,1 +1,1 @@
-"# lotto" 
+A console version of the popular lottery game in Polish.
