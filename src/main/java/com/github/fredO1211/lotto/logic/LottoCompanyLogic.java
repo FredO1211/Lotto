@@ -1,7 +1,7 @@
-package com.github.FredO1211.Lotto.logic;
+package com.github.fredO1211.lotto.logic;
 
-import com.github.FredO1211.Lotto.messagegenerator.MessageGenerator;
-import com.github.FredO1211.Lotto.model.Coupon;
+import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
+import com.github.fredO1211.lotto.model.Coupon;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -14,8 +14,8 @@ public class LottoCompanyLogic {
         Set<Integer> numbers = new HashSet<>();
         Random random = new Random();
 
-        while (numbers.size() < 6) {
-            numbers.add(random.nextInt(98) + 1);
+        while (numbers.size() < Coupon.getCouponSize()) {
+            numbers.add(random.nextInt(Coupon.getCouponRage() - 1) + 1);
         }
 
         System.out.println(MessageGenerator.BEFORE_DRAW_MSG);
@@ -26,7 +26,7 @@ public class LottoCompanyLogic {
 
     public static Optional<Coupon> validCoupon(Set<Integer> numbers) {
         if (numbers.stream()
-                .allMatch(number -> number > 0 && number < 100)) {
+                .allMatch(number -> number > 0 && number <= Coupon.getCouponRage())) {
             return Optional.of(new Coupon(numbers));
         }
         System.out.println(MessageGenerator.WRONG_COUPON_MSG);

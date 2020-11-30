@@ -1,8 +1,8 @@
-package com.github.FredO1211.Lotto.logic;
+package com.github.fredO1211.lotto.logic;
 
-import com.github.FredO1211.Lotto.messagegenerator.MessageGenerator;
-import com.github.FredO1211.Lotto.model.Coupon;
-import com.github.FredO1211.Lotto.model.LottoCompany;
+import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
+import com.github.fredO1211.lotto.model.Coupon;
+import com.github.fredO1211.lotto.model.LottoCompany;
 
 import java.util.Set;
 

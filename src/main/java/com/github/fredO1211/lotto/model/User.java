@@ -1,9 +1,11 @@
-package com.github.FredO1211.Lotto.model;
+package com.github.fredO1211.lotto.model;
+
+import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
 
 import java.util.ArrayList;
 
 public class User {
-    private ArrayList<Coupon> coupons = new ArrayList<>();
+    private final ArrayList<Coupon> coupons = new ArrayList<>();
     private int balance;
 
     public User(int balance) {
@@ -23,7 +25,7 @@ public class User {
     }
 
     public void printCoupons() {
-        System.out.println("Twoje kupony:");
+        System.out.println(MessageGenerator.BEFORE_PRINT_COUPONS_MSG);
         for (Coupon coupon : coupons) {
             System.out.println(coupon.getNumbers());
         }

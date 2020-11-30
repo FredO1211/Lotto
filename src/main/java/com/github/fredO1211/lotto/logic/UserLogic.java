@@ -1,12 +1,14 @@
-package com.github.FredO1211.Lotto.logic;
+package com.github.fredO1211.lotto.logic;
 
-import com.github.FredO1211.Lotto.messagegenerator.MessageGenerator;
-import com.github.FredO1211.Lotto.model.Coupon;
-import com.github.FredO1211.Lotto.model.LottoCompany;
-import com.github.FredO1211.Lotto.model.User;
+import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
+import com.github.fredO1211.lotto.model.Coupon;
+import com.github.fredO1211.lotto.model.LottoCompany;
+import com.github.fredO1211.lotto.model.User;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
 public class UserLogic {
@@ -32,11 +34,16 @@ public class UserLogic {
 
     public Set<Integer> pickNumbers() {
         Set<Integer> numbers = new HashSet<>();
-        Scanner scanner = new Scanner(System.in);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        while (numbers.size() < 6) {
+        while (numbers.size() < Coupon.getCouponSize()) {
             System.out.println(MessageGenerator.PICK_NUMBER_MSG);
-            numbers.add(scanner.nextInt());
+            try {
+                String gettingValue = reader.readLine();
+                numbers.add(Integer.parseInt(gettingValue));
+            } catch (NumberFormatException | IOException e) {
+                System.out.println(MessageGenerator.INVALID_VALUE_MSG);
+            }
         }
         return numbers;
     }
@@ -44,13 +51,13 @@ public class UserLogic {
     public void checkAllCoupons(Set<Integer> winningsNumbers) {
         if (user.getCoupons().size() > 0) {
             for (Coupon coupon : user.getCoupons()) {
+                System.out.println(coupon.getNumbers());
                 user.setBalance(user.getBalance() + new CouponLogic(coupon).realiseCoupon(winningsNumbers));
-                MessageGenerator.printBalance(user);
             }
+            MessageGenerator.printBalance(user);
             user.getCoupons().clear();
         } else {
             System.out.println(MessageGenerator.EMPTY_COUPONS_ARRAY_MSG);
         }
     }
-
 }

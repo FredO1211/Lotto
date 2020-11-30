@@ -1,6 +1,6 @@
-package com.github.FredO1211;
+package com.github.fredO1211;
 
-import com.github.FredO1211.Lotto.*;
+import com.github.fredO1211.lotto.LottoGame;
 
 public class Main {
     public static void main(String[] args) {

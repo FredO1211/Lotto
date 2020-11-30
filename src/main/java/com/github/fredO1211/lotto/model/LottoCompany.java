@@ -1,11 +1,12 @@
-package com.github.FredO1211.Lotto.model;
+package com.github.fredO1211.lotto.model;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LottoCompany {
     private static final int COUPON_COST = 3;
 
-    private static Map<Integer, Integer> winningAmountMap = new HashMap<>();
+    private static final Map<Integer, Integer> winningAmountMap = new HashMap<>();
 
     static {
         winningAmountMap.put(0, 0);

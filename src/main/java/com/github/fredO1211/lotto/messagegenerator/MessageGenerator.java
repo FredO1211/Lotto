@@ -1,7 +1,7 @@
-package com.github.FredO1211.Lotto.messagegenerator;
+package com.github.fredO1211.lotto.messagegenerator;
 
-import com.github.FredO1211.Lotto.model.LottoCompany;
-import com.github.FredO1211.Lotto.model.User;
+import com.github.fredO1211.lotto.model.LottoCompany;
+import com.github.fredO1211.lotto.model.User;
 
 public class MessageGenerator {
     public static final String WINNING_MSG = "Gratulacje, wygrałeś ";
@@ -11,8 +11,9 @@ public class MessageGenerator {
     public static final String PICK_NUMBER_MSG = "Skreśl liczbę:";
     public static final String BEFORE_DRAW_MSG = "W dzisiejszym losowaniu padły następujące numery: ";
     public static final String MENU_MSG = "1. Puść kupon\n2. Realizuj kupony\n3. Pokaż moje kupony";
-    public static final String INVALID_MENU_OPTION_MSG = "Nieprawidłowa liczba. Spróbuj jeszcze raz!";
+    public static final String INVALID_VALUE_MSG = "Nieprawidłowa wartość. Spróbuj jeszcze raz!";
     public static final String EMPTY_COUPONS_ARRAY_MSG = "Nie posiadasz żadnych kuponów";
+    public static final String BEFORE_PRINT_COUPONS_MSG = "Twoje kupony:";
     public static final String CURRENCY = "zł";
 
     public static void resultMessage(Integer quantityOfCorrectNumbers) {
