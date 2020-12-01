@@ -28,11 +28,26 @@ public class UserLogicTest {
         User user = new User(LottoCompany.getCouponCost());
         UserLogic userLogic = new UserLogic(user);
 
-        String data = "R\r\n1\r\n2\r\n3\r\n4\r\n5\r\n6\r\n";
+        String userData = "R\r\n1\r\n2\r\n3\r\n4\r\n5\r\n6\r\n";
 
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        String consoleMsg = tapSystemOut(userLogic::buyCoupon);
+        System.setIn(new ByteArrayInputStream(userData.getBytes()));
+        String consoleMsg = tapSystemOut(userLogic::pickNumbers);
 
         Assert.assertTrue(consoleMsg.contains(MessageGenerator.INVALID_VALUE_MSG));
+    }
+
+    @Test
+    public void correctCouponPurchaseTest() {
+        User user = new User(LottoCompany.getCouponCost());
+        UserLogic userLogic = new UserLogic(user);
+        var countOfUserCoupons = user.getCoupons().size();
+
+        String userData = "1\r\n2\r\n3\r\n4\r\n5\r\n6\r\n";
+
+        System.setIn(new ByteArrayInputStream(userData.getBytes()));
+        userLogic.buyCoupon();
+
+        Assert.assertEquals(0, user.getBalance());
+        Assert.assertEquals(countOfUserCoupons + 1, user.getCoupons().size());
     }
 }
