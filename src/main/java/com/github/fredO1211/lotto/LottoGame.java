@@ -1,10 +1,10 @@
 package com.github.fredO1211.lotto;
 
 import com.github.fredO1211.Game;
-import com.github.fredO1211.lotto.logic.LottoCompanyLogic;
-import com.github.fredO1211.lotto.logic.UserLogic;
+import com.github.fredO1211.lotto.lottocompany.LottoCompanyLogic;
+import com.github.fredO1211.lotto.user.UserLogic;
 import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
-import com.github.fredO1211.lotto.model.User;
+import com.github.fredO1211.lotto.user.User;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -30,7 +30,7 @@ public class LottoGame implements Game {
 
 
         Scanner scanner = new Scanner(System.in);
-        Integer choice = null;
+        Integer choice;
 
         try {
             choice = scanner.nextInt();

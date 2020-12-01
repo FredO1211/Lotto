@@ -1,7 +1,7 @@
-package com.github.fredO1211.lotto.logic;
+package com.github.fredO1211.lotto.lottocompany;
 
 import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
-import com.github.fredO1211.lotto.model.Coupon;
+import com.github.fredO1211.lotto.coupon.Coupon;
 
 import java.util.HashSet;
 import java.util.Optional;

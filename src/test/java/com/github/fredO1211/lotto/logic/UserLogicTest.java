@@ -1,8 +1,9 @@
 package com.github.fredO1211.lotto.logic;
 
 import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
-import com.github.fredO1211.lotto.model.LottoCompany;
-import com.github.fredO1211.lotto.model.User;
+import com.github.fredO1211.lotto.lottocompany.LottoCompany;
+import com.github.fredO1211.lotto.user.User;
+import com.github.fredO1211.lotto.user.UserLogic;
 import org.junit.Assert;
 import org.junit.Test;
 

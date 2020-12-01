@@ -1,15 +1,14 @@
-package com.github.fredO1211.lotto.logic;
+package com.github.fredO1211.lotto.coupon;
 
+import com.github.fredO1211.lotto.lottocompany.LottoCompany;
 import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
-import com.github.fredO1211.lotto.model.Coupon;
-import com.github.fredO1211.lotto.model.LottoCompany;
 
 import java.util.Set;
 
 public class CouponLogic {
     Coupon coupon;
 
-    CouponLogic(Coupon coupon) {
+    public CouponLogic(Coupon coupon) {
         this.coupon = coupon;
     }
 

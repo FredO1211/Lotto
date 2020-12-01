@@ -1,9 +1,10 @@
-package com.github.fredO1211.lotto.logic;
+package com.github.fredO1211.lotto.user;
 
+import com.github.fredO1211.lotto.coupon.CouponLogic;
+import com.github.fredO1211.lotto.lottocompany.LottoCompanyLogic;
 import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
-import com.github.fredO1211.lotto.model.Coupon;
-import com.github.fredO1211.lotto.model.LottoCompany;
-import com.github.fredO1211.lotto.model.User;
+import com.github.fredO1211.lotto.coupon.Coupon;
+import com.github.fredO1211.lotto.lottocompany.LottoCompany;
 
 import java.io.BufferedReader;
 import java.io.IOException;

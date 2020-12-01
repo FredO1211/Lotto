@@ -1,4 +1,4 @@
-package com.github.fredO1211.lotto.model;
+package com.github.fredO1211.lotto.coupon;
 
 import java.util.Set;
 

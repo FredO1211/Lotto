@@ -1,6 +1,7 @@
-package com.github.fredO1211.lotto.model;
+package com.github.fredO1211.lotto.user;
 
 import com.github.fredO1211.lotto.messagegenerator.MessageGenerator;
+import com.github.fredO1211.lotto.coupon.Coupon;
 
 import java.util.ArrayList;
 
