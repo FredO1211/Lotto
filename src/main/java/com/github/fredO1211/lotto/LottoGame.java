@@ -22,7 +22,8 @@ public class LottoGame implements Game {
     }
 
     private void handleMenu() {
-        final int INVALID_VALUE = 0;
+        final int INVALID_VALUE = -1;
+        final int QUIT = 0;
         final int BUY_COUPONS = 1;
         final int CHECK_ALL_COUPONS = 2;
         final int PRINT_COUPONS = 3;
@@ -38,6 +39,10 @@ public class LottoGame implements Game {
         }
 
         switch (choice) {
+            case QUIT:
+                System.out.println(MessageGenerator.THANKS_FOR_GAME);
+                Runtime.getRuntime().exit(0);
+                break;
             case BUY_COUPONS:
                 userLogic.buyCoupon();
                 break;

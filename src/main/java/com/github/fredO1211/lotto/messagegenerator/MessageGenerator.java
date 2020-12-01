@@ -10,10 +10,11 @@ public class MessageGenerator {
     public static final String WRONG_COUPON_MSG = "Skreślone liczby są nieprawidłowe";
     public static final String PICK_NUMBER_MSG = "Skreśl liczbę:";
     public static final String BEFORE_DRAW_MSG = "W dzisiejszym losowaniu padły następujące numery: ";
-    public static final String MENU_MSG = "1. Puść kupon\n2. Realizuj kupony\n3. Pokaż moje kupony";
+    public static final String MENU_MSG = "1. Puść kupon\n2. Realizuj kupony\n3. Pokaż moje kupony\n0. Wyjście";
     public static final String INVALID_VALUE_MSG = "Nieprawidłowa wartość. Spróbuj jeszcze raz!";
     public static final String EMPTY_COUPONS_ARRAY_MSG = "Nie posiadasz żadnych kuponów";
     public static final String BEFORE_PRINT_COUPONS_MSG = "Twoje kupony:";
+    public static final String THANKS_FOR_GAME = "Dziekujemy za grę!";
     public static final String CURRENCY = "zł";
 
     public static void resultMessage(Integer quantityOfCorrectNumbers) {
